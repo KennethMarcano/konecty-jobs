@@ -1,9 +1,8 @@
 'use client';
 
-import { FaArrowLeft, FaArrowRight } from 'react-icons/fa';
 import clsx from 'clsx';
 import Link from 'next/link';
-import { generatePagination } from '@/app/lib/utils';
+import { generatePagination } from '../../lib/utils';
 import { usePathname, useSearchParams } from 'next/navigation';
 
 export default function Pagination({ totalPages }: { totalPages: number }) {
@@ -39,7 +38,7 @@ export default function Pagination({ totalPages }: { totalPages: number }) {
 
             return (
               <PaginationNumber
-                key={page}
+                key={index}
                 href={createPageURL(page)}
                 page={page}
                 position={position}
@@ -111,9 +110,9 @@ function PaginationArrow({
 
   const icon =
     direction === 'left' ? (
-      <FaArrowLeft className="w-4" />
+      '←'
     ) : (
-      <FaArrowRight className="w-4" />
+      '→'
     );
 
   return isDisabled ? (

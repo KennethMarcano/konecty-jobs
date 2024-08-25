@@ -1,6 +1,16 @@
 {
   "compilerOptions": {
-    "lib": ["dom", "dom.iterable", "esnext"],
+    "target": "esnext",
+    "types": [
+      "jest",
+      "@testing-library/jest-dom",
+      "node"
+    ],
+    "lib": [
+      "dom",
+      "dom.iterable",
+      "esnext"
+    ],
     "allowJs": true,
     "skipLibCheck": true,
     "strict": true,
@@ -18,9 +28,35 @@
       }
     ],
     "paths": {
-      "@/*": ["./src/*"]
+      "@/*": [
+        "./src/*"
+      ]
     }
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts"],
-  "exclude": ["node_modules"]
+  "include": [
+    "next-env.d.ts",
+    "**/*.ts",
+    "**/*.tsx",
+    ".next/types/**/*.ts"
+  ],
+  "exclude": [
+    "node_modules"
+  ]
 }
+// {  
+//   "compilerOptions": {  
+//     "target": "esnext",  
+//     "module": "esnext", // o "esnext" si es necesario  
+//     "jsx": "react-jsx", // Asegúrate de que esto esté configurado correctamente  
+//     "strict": true,  
+//     "esModuleInterop": true,  
+//     "skipLibCheck": true,  
+//     "forceConsistentCasingInFileNames": true,  
+//     "resolveJsonModule": true,  
+//     "isolatedModules": true,  
+//     "types": ["jest", "@testing-library/jest-dom", "node"],  
+//     "lib": ["dom", "dom.iterable", "esnext"]  
+//   },  
+//   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts"],  
+//   "exclude": ["node_modules"]  
+// }
